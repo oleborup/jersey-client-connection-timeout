@@ -1,4 +1,4 @@
-package oleborup.JerseyConnectionTimeoutTest;
+package oleborup.jerseyconnectiontimeout;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

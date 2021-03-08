@@ -1,4 +1,4 @@
-package oleborup.JerseyConnectionTimeoutTest;
+package oleborup.jerseyconnectiontimeout;
 
 import org.glassfish.jersey.client.ClientProperties;
 import org.junit.jupiter.api.Test;
