@@ -1,6 +1,6 @@
 # Introduction
 
-For Spring Boot 2.5.0 and Jersey client 2.33 the client connection timeout is double the configured if posting an entity.
+For Jersey client >= 2.31 the client connection timeout is double the configured if posting an entity.
 
 ```java
     client.property(ClientProperties.CONNECT_TIMEOUT, 2000);

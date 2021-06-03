@@ -1,8 +1,7 @@
 package oleborup.jerseyconnectiontimeout;
 
 import org.glassfish.jersey.client.ClientProperties;
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.Test;
 
 import javax.ws.rs.ProcessingException;
 import javax.ws.rs.client.Client;
@@ -12,15 +11,13 @@ import javax.ws.rs.client.Invocation;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.assertEquals;
 
-@SpringBootTest
-class TimeoutTests {
+public class TimeoutTest {
 
 	private final Invocation.Builder invocationBuilder;
 
-	public TimeoutTests() {
+	public TimeoutTest() {
 		Client client = ClientBuilder.newClient();
 		client.property(ClientProperties.CONNECT_TIMEOUT, 2000);
 		client.property(ClientProperties.READ_TIMEOUT, 15000);
@@ -38,7 +35,7 @@ class TimeoutTests {
 		}
 		long duration = (System.currentTimeMillis() - start) / 1000;
 		System.out.println("Duration: " + duration);
-		assertTrue(duration < 3);
+		assertEquals(duration, 2);
 	}
 
 	@Test
