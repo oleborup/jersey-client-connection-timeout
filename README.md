@@ -8,7 +8,7 @@ For Jersey client >= 2.31 the client connection timeout is double the configured
     invocationBuilder.post(Entity.json(request)); // double connection timeout 4 sec
 ```
 
-To reproduce see test `TimeoutTests`
+To reproduce see test `TimeoutTest`
 
     mvn test
 
