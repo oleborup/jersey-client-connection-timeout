@@ -21,7 +21,7 @@ public class TimeoutTest {
 		Client client = ClientBuilder.newClient();
 		client.property(ClientProperties.CONNECT_TIMEOUT, 2000);
 		client.property(ClientProperties.READ_TIMEOUT, 15000);
-		invocationBuilder = client.target("http://stripe.reepay.com").request();
+		invocationBuilder = client.target("http://54.154.64.108").request();
 	}
 
 	@Test
